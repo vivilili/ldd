@@ -1,0 +1,40 @@
+@import "~scss/variables";
+@import "~scss/mixins";
+
+.content {
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  background-color: #ffffff;
+  text-align: left;
+  th,
+  td {
+    text-align: center; /** 设置水平方向居中 */
+    vertical-align: middle; /** 设置垂直方向居中 */
+  }
+  
+  .header {
+    display: flex;
+    padding: 12px;
+    background-color: $th-bg-color;
+
+    .search {
+      width: 100%;
+    }
+
+    .actions {
+      flex: 1 0 auto;
+
+      :global {
+        button {
+          margin-left: 12px;
+
+          &:hover {
+            background-color: $bg-color;
+          }
+        }
+      }
+    }
+  }
+}

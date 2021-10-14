@@ -1,0 +1,108 @@
+@import '~scss/variables';
+@import '~scss/mixins';
+
+.card {
+
+
+}
+
+.content {
+  //display: inline-block;
+  display: flex;
+  width: 100%;
+}
+//四个小块最外面的div样式控制
+.tabList {
+  //设定可以放两个tab的宽度
+  width: 50%;
+  margin-right: 12px;
+
+
+  //四个小块的div样式
+  .tab {
+    //将四个小块改为块内元素
+    width: 46%;
+    height: 100px;
+    display: inline-block;
+    margin-right:2%;
+    position: relative;
+    flex: 1;
+    //display: flex;
+    align-items: center;
+    min-height: 68px;
+    border-radius: 4px;
+    background-color: $blue-color02;
+    cursor: pointer;
+
+    //color:$red-color02;
+
+    & + .tab:nth-child(1) {
+      margin-top: 8px;
+
+      background-color: $blue-color02;
+    }
+    & + .tab:nth-child(2) {
+      margin-top: 8px;
+      background-color: $red-color02;
+    }
+    & + .tab:nth-child(3) {
+      margin-top: 8px;
+      background-color:$green-color02;
+    }
+    & + .tab:nth-child(4) {
+      margin-top: 8px;
+      background-color:$yellow-color02;
+    }
+
+    //div:nth-child(2){
+    //  background-color: $green-color02;
+    //}
+    //div:nth-child(3){
+    //  background-color: $yellow-color02;
+    //}
+    //div:nth-child(4){
+    //  background-color: $dark-color02;
+    //}
+
+    &.active {
+      background-color: $blue-color02;
+    }
+
+    .img {
+      position: absolute;
+      top: 0;
+      right: -30px;
+      width: 80px;
+      height: 80px;
+      background-image: url('/assets/banner-icon-1.svg');
+      background-size: 80px auto;
+      background-repeat: no-repeat;
+      pointer-events: none;
+    }
+
+    .inner {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+    }
+  }
+}
+
+.tabContent {
+  flex: 1;
+
+  .inner {
+    height: 100%;
+    border-radius: 4px;
+    background-color: $card-bg-color;
+
+    :global {
+      .spin-nested-loading,
+      .spin-container {
+        height: 100%;
+      }
+    }
+  }
+}

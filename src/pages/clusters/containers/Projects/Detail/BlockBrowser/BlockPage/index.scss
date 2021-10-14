@@ -1,0 +1,80 @@
+@import "~scss/variables";
+@import "~scss/mixins";
+
+.avatar {
+  display: flex;
+
+  .icon {
+    position: relative;
+    margin-right: 12px;
+
+    .indicator {
+      position: absolute;
+      top: 28px;
+      right: 0;
+    }
+  }
+
+  .title {
+    @include TypographyTitleH6($dark-color07);
+  }
+
+  .desc {
+    @include TypographyParagraph($dark-color01);
+  }
+}
+.blockPages {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin: auto;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.43;
+
+  th,
+  td {
+    background-color: #ffffff;
+    text-align: center; /** 设置水平方向居中 */
+    vertical-align: middle; /** 设置垂直方向居中 */
+  }
+
+  .block {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    margin-right: 10px;
+    background-color: #ffffff;
+    font-size: 14px;
+
+    .buttonBlock {
+      display: inline-block;
+      z-index: 999;
+      position: absolute;
+      width: 10vh;
+      left: 85%;
+      top: 1%;
+    }
+  }
+  .transaction {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    background-color: #ffffff;
+    margin-left: 10px;
+
+    .transactionBlock {
+      display: inline-block;
+      z-index: 999;
+      position: absolute;
+      width: 10vh;
+      left: 85%;
+      top: 1%;
+    }
+  }
+  .moreblock {
+    display: inline-block;
+    font-size: 10px;
+  }
+}

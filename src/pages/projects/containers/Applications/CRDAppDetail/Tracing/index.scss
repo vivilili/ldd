@@ -1,0 +1,15 @@
+@import '~scss/variables';
+
+.operations {
+  display: flex;
+  :global {
+    .select, .input {
+      width: 188px;
+      margin-right: 12px;
+    }
+
+    .select-value {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import '~scss/variables';
+@import '~scss/mixins';
+
+.crumbContainer {
+  min-height: 20px;
+  padding-top: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  overflow: hidden;
+
+  & > button {
+    width: 20px;
+    height: 20px;
+    padding: 0 !important;
+    background-color: $light-color04;
+    border: none;
+    border-radius: 4px;
+    align-self: center;
+
+    & + button {
+      margin-left: 4px !important;
+    }
+
+    & > span {
+      width: 20px;
+    }
+  }
+
+  .crumb {
+    display: flex;
+    margin-left: 10px;
+    font-weight: $font-bold;
+    color: $dark-color06;
+    flex-wrap: wrap;
+
+    & > div {
+      display: flex;
+    }
+
+    .crumbTitle {
+      margin-left: 3px;
+      cursor: default;
+    }
+  }
+}
